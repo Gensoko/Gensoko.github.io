@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,100..900;1,100..900&family=Goldman:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+canvas {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+}
+
+body {
+	background-color: #070c08;
+}
+
+body .outer-container {
+	font-family: "Goldman", sans-serif;
+	position: relative;
+	text-align: center;
+}
+
+body .outer-container .hero-image {
+	width: 100%;
+	clip-path: border-box;
+}
+
+body .outer-container .hero-text {
+	font-size: 3.5rem;
+	font-weight: 500;
+	position: absolute;
+	color: white;
+	top: 70%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	z-index: 10;
+	text-shadow: -1px -1px 0 red, 1px -1px 0 red, -1px 1px 0 red, 1px 1px 0 red;
+}
+
+body .outer-container .hero-text-xs {
+	font-size: 3rem;
+	color: white;
+}
+
+body .text-container {
+	color: white;
+}
+
+body .text-container .toggle-btn {
+	font-size: 0.8rem;
+	padding: 0.5rem;
+	text-align: right;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+body .text-container .section-break {
+	text-align: center;
+	margin: 20px auto;
+}
+
+body .text-container .sub-hed {
+	padding-top: 5vh;
+	text-align: center;
+}
+
+body .text-container .article {
+	font-size: 1rem;
+	line-height: 1.75rem;
+}
+
+body .text-container .article .inline-image {
+	display: grid;
+	place-content: center;
+}
+
+body .text-container .article .inline-image img {
+	height: 100%;
+	width: 100%;
+}
+
+body .text-container .article .inline-image .caption {
+	font-size: 0.75rem;
+	justify-self: center;
+}
+
+body .text-container .article .diptych {
+	grid-gap: 5px;
+	grid-template-columns: 50% 50%;
+}
+
+body .text-container .article .single {
+	grid-template-columns: 100%;
+}
+
+body .text-container .article .quad {
+	grid-template-columns: 50% 50%;
+	grid-template-rows: 50% 50%;
+	grid-gap: 5px;
+}
+
+body .footer-row {
+	text-align: center;
+	padding-bottom: 2vh;
+}
+
+body.light {
+	background-color: white;
+	color: black;
+}
+
+body.light .outer-container .hero-text-xs {
+	color: black;
+}
+
+body.light .text-container {
+	color: black;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 20px;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.grid-item img,
+.grid-item iframe {
+	width: 100%;
+	height: auto;
+	aspect-ratio: 16 / 9;
+}
+
+.video-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 10px;
+}
+
+.video-item {
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+}
+
+.video-item iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
